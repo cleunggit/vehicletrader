@@ -12,7 +12,6 @@ $(function () {
     app.init();
     $('.searchBtn').on('click', function(e) {
         e.preventDefault()
-        // app.getSelectedVehicle(app.allVehicles)
         app.searchAPI(app.modelSelected)
     })
 });
@@ -24,6 +23,7 @@ app.vehicleClasses = []
 app.makeSelected = ''
 app.modelSelected = ''
 app.priceSelected = ''
+
 
 // get all vehicles on each page
 app.getVehicleFromPageNum = (pageNum) => {
@@ -87,37 +87,6 @@ app.getVehicles = () => {
     }
 }
 
-// remove duplicates and populate dropdown with manufacturers
-app.renderManufacturers = (manufacturers) => {
-    const unique = [...new Set(manufacturers)].sort()
-    $('#make').empty();
-    $('#make').append(`<option class="make" value="">Any Make</option>`)
-    unique.forEach(make => {
-        $('#make').append(`<option class="make" value="">${make}</option>`)
-    })
-    console.log('Rendered');
-}
-
-// filter by manufacturer
-app.filterByManufacturer = (vehicles, make) => {
-    // when the user selects a make
-    // iterate through the vehicles
-    const filtered = vehicles.filter(vehicle => {
-        // if the manufacturer is found return the vehicle
-        return vehicle.manufacturer === make
-    })
-    app.renderModels(filtered)
-}
-
-// render model select dropdown
-app.renderModels = (vehicles) => {
-    $('#models').append(`<option value="">Any Model</option>`)
-    vehicles.forEach(model => {
-        $('#models').append(`<option class="model" value="">${model.name}</option>`)
-    })
-    // console.log('Rendered');
-}
-
 // get value from dropdown
 app.getSelectValue = function() {
     $('form').on('change', '.make', function(){
@@ -138,7 +107,10 @@ app.getSelectModel = function() {
     })
 }
 
+// This function will search the API for the selected model
 app.searchAPI = (item) => {
+    if (item === '') return // prevents searching before options are selected
+
     let formatted = item.split(' ').join('%20')
     $.ajax({
             url: `https://swapi.dev/api/vehicles/?search=${formatted}`,
@@ -150,6 +122,38 @@ app.searchAPI = (item) => {
         });
 }
 
+// remove duplicates and populate dropdown with manufacturers
+app.renderManufacturers = (manufacturers) => {
+    const unique = [...new Set(manufacturers)].sort()
+    $('#make').empty();
+    $('#make').append(`<option class="make" value="">Select a Make</option>`)
+    unique.forEach(make => {
+        $('#make').append(`<option class="make" value="">${make}</option>`)
+    })
+    console.log('Rendered');
+}
+
+// filter by manufacturer
+app.filterByManufacturer = (vehicles, make) => {
+    // when the user selects a make
+    // iterate through the vehicles
+    const filtered = vehicles.filter(vehicle => {
+        // if the manufacturer is found return the vehicle
+        return vehicle.manufacturer === make
+    })
+    app.renderModels(filtered)
+}
+
+// render model select dropdown
+app.renderModels = (vehicles) => {
+    $('#models').append(`<option value="">Select a Model</option>`)
+    vehicles.forEach(model => {
+        $('#models').append(`<option class="model" value="">${model.name}</option>`)
+    })
+    // console.log('Rendered');
+}
+
+// This function takes the response from the searchAPI function and renders the vehicle specs on the page
 app.displaySelected = (item) => {
     $('.description').empty()
     $('.description').append(`
@@ -173,3 +177,4 @@ app.displaySelected = (item) => {
     </p>
     `);
 };
+
