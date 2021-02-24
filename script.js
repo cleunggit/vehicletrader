@@ -157,7 +157,7 @@ app.renderModels = (vehicles) => {
 app.displaySelected = (item) => {
     $('.vehicle-name').empty()
     $('.specs').empty()
-
+    $('.card').addClass('visible')
     $('.vehicle-name').append(`
     <h3>${item.name}</h3>
     <p>${item.cost_in_credits} credits</p>

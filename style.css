@@ -21,6 +21,10 @@ body {
   background-color: var(--lightgray);
 }
 
+h2 {
+  font-weight: 300;
+}
+
 .wrapper {
   display: flex;
   min-height: 100vh;
@@ -139,7 +143,8 @@ form {
 .searchBtnContainer {
   display: block;
   background: var(--yellow);
-  padding: 15px 40px;
+  padding: 15px 60px;
+  border-radius: 4px;
 }
 
 .selectedVehicle {
@@ -150,6 +155,7 @@ form {
   background-color: white;
   padding: 5px 20px;
   margin: 20px 0;
+  visibility: hidden;
 }
 
 
@@ -163,11 +169,18 @@ form {
 
 .vehicle_class {
   flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.classes {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .classes .classItem {
   width: calc(25% - 20px);
   margin: 10px;
+  font-weight: 700;
 }
 
 .classItem img {
@@ -176,6 +189,7 @@ form {
 
 .partners {
   flex-direction: column;
+  margin: 20px 0;
 }
 
 .partners img {
@@ -186,4 +200,8 @@ form {
 .footer {
   background: var(--gray);
   color: white;
+}
+
+.visible {
+  visibility: visible;
 }
