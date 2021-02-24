@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Project 2</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav class="nav flex">
+                <a href="" class="header__logo shadow">
+                    <img src="https://www.autotrader.ca/Images/SVG/en-CA/autoTRADERLogoBadge.svg" alt="">
+                </a>
+                <div class="header__links_top flex flex-jc-sb flex-ai-c">
+                    <a class="nav-item" href="#">Speeders, Tansports & Walkers</a>
+                    <a class="nav-item" href="#">Starfighters</a>
+                    <a class="nav-item" href="#">Airspeeders</a>
+                    <a class="nav-item"href="#">Transports</a>
+                    <a class="nav-item"href="#">Walkers</a>
+                    <a class="nav-item"href="#">Landing Crafts</a>
+                </div>
+                <div class="header__links_bottom flex flex-jc-sb flex-ai-c">
+                    <a class="nav-item" href="#">Sell My Vehicle</a>
+                    <a class="nav-item" href="#">Shop New Vehicles</a>
+                    <a class="nav-item" href="#">Reviews & Advice</a>
+                    <a class="nav-item" href="#">What's My Ship Worth?</a>
+                </div>
+            </nav>
+        </header>
+        <div class="hero">
+            <img src="/project-2/assets/masthead_ad-blocker_EN.jpg" alt="">
+        </div>
+
+        <div class="container">
+            <section id="search">
+                <div class="basicSearch">
+                    <span>Search</span>
+                    <span>380,712</span>
+                    <span>Speeders, Transports & Walkers</span>
+                </div>
+                <div class="searchBoxContainer flex flex-ai-c">
+                    <form class="flex flex-jc-sb flex-ai-c" action="">
+                        <div class="make">
+                            <!-- <div class="dropdown-arrow">
+                                <i class="fa fa-chevron-down"></i>
+                            </div> -->
+                            <select name="makes" id="make">
+                                <option value="">Any Make</option>
+                                <!-- dyanmically inserted options -->
+                            </select>
+                        </div>
+                        <div class="model">
+                            <select name="models" id="models">
+                                <option value="Any Model">Any Model</option>
+                                <!-- inserted dynamically -->
+                            </select>
+                        </div>
+                        <div class="price">
+                            <select name="prices" id="">
+                                <option value="max">Max. Price</option>
+                                <option value="10000">10,000 credits</option>
+                                <option value="1000000">10,000,000 credits</option>
+                                <option value="100000000">100,000,000 credits</option>
+                                <option value="10000000000">10,000,000,000 credits</option>
+                                <option value="1000000000000">1,000,000,000,000 credits</option>
+                            </select>
+                        </div>
+                        <div class="searchBtnContainer">
+                            <a class="searchBtn" href="">Search</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="selectedVehicle">
+                <h2>You Selected</h2>
+                <div class="description">
+                    
+                </div>
+            </section>
+
+            <!-- Vehicles by Class -->
+            <section class="vehicle_class flex">
+                <h2>Research new vehicles by class</h2>
+                <div class="classes flex">
+                    <div class="classItem">
+                        <img src="/project-2/assets/vehicles/walker.jpg" alt="">
+                        <p>Walker</p>
+                    </div>
+                    <div class="classItem">
+                        <img src="/project-2/assets/vehicles/wheeled.jpg" alt="">
+                        <p>Wheeled</p>
+                    </div>
+                    <div class="classItem">
+                        <img src="/project-2/assets/vehicles/airspeeder.jpg" alt="">
+                        <p>Airspeeder</p>
+                    </div>
+                    <div class="classItem">
+                        <img src="/project-2/assets/vehicles/repulsorcraft.jpg" alt="">
+                        <p>Repulsorcraft</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="partners">
+                <h2>Our Partners</h2>
+                <img src="/project-2/assets/index.svg" alt="">
+            </section>
+
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p>Created at Juno College</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
