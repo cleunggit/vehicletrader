@@ -7,6 +7,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   --lightgray: #f1f1f1;
   --orange: #e64e08;
   --yellow: #e6bd08;
+  --blue: rgb(8,160,230);
 }
 
 html {
@@ -109,9 +110,22 @@ a, a:visited, a:hover {
   position: relative;
 }
 
+.ad {
+  color: var(--lightgray);
+  background-color: rgba(230,189,8, 0.7);
+  width: 380px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.ad p {
+  margin: 0;
+}
+
 .overlay {
   position: absolute;
-  top: 200px;
+  top: 160px;
   right: 140px;
   /* bottom: 0; */
   /* right: 0; */
@@ -142,7 +156,7 @@ form {
 
 .searchBtnContainer {
   display: block;
-  background: var(--yellow);
+  background: var(--blue);
   padding: 15px 60px;
   border-radius: 4px;
 }
