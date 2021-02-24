@@ -7,7 +7,7 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
   --lightgray: #f1f1f1;
   --orange: #e64e08;
   --yellow: #e6bd08;
-  --blue: rgb(8,160,230);
+  --blue: rgb(8,86,230);
 }
 
 html {
@@ -80,7 +80,7 @@ h2 {
 }
 
 .shadow {
-  filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 2px 3px)
+  filter: drop-shadow(rgba(0, 0, 0, 0.3) 2px 1px 2px)
 }
 
 .header__links_top {
@@ -111,12 +111,22 @@ a, a:visited, a:hover {
 
 .hero img {
   width: 100%;
+}
+
+.hero .container {
   position: relative;
+  width: 1080px;
+}
+
+.overlay {
+  position: absolute;
+  top: 160px;
+  right: 100px;
 }
 
 .ad {
   color: var(--lightgray);
-  background-color: rgba(8, 160, 230, 0.9);
+  background-color: rgba(8, 123, 230, 0.9);
   width: 450px;
   text-align: left;
   padding: 10px;
@@ -138,25 +148,26 @@ a, a:visited, a:hover {
   text-align: left;
 }
 
-.overlay {
-  position: absolute;
-  top: 160px;
-  right: 140px;
-  /* bottom: 0; */
-  /* right: 0; */
-}
-
 #search {
   text-align: left;
   /* height: 200px; */
   margin-top: -50px;
+  position: relative;
+}
+
+.basicSearch {
+  background: var(--gray);
+  text-align: center;
+  color: white;
+  padding: 10px;
+  width: 40%;
+  font-size: 18px;
 }
 
 .searchBoxContainer {
   background: var(--gray);
   height: 100px;
-  padding: 0 20px;
-  
+  padding: 20px;
 }
 
 select {
