@@ -12,7 +12,8 @@ $(function () {
     app.init();
     $('.searchBtn').on('click', function(e) {
         e.preventDefault()
-        app.getSelectedVehicle(app.allVehicles)
+        // app.getSelectedVehicle(app.allVehicles)
+        app.searchAPI(app.modelSelected)
     })
 });
 
@@ -137,35 +138,38 @@ app.getSelectModel = function() {
     })
 }
 
-app.getSelectedVehicle = (vehicle) => {
-    // const selected = vehicles.filter(vehicle => {
-    //     return vehicle.model === app.modelSelected
-    // })
-    $('.description').empty()
-    for (let i = 0; i < app.allVehicles.length; i++) {
-        if (app.allVehicles[i].model === app.modelSelected) {
-            console.log(app.allVehicles[i]);
-            $('.description').append(`
-                <h3>${app.allVehicles[i].name}</h3>
-                <p>
-                <span>Manufacturer: ${app.allVehicles[i].manufacturer}</span>
-                <br>
-                <span>Cost: ${app.allVehicles[i].cost} credits</span>
-                <br>
-                <span>Vehicle Class: ${app.allVehicles[i].vehicle_class}</span>
-                <br>
-                <span>Speed ${app.allVehicles[i].max_atmosphering_speed}km/h</span>
-                <br>
-                <span>Cargo Capacity: ${app.allVehicles[i].cargo_capacity}kg</span>
-                <br>
-                <span>Length: ${app.allVehicles[i].length}m</span>
-                <br>
-                <span>Crew: ${app.allVehicles[i].crew}</span>
-                <br>
-                <span>Passengers: ${app.allVehicles[i].passengers}</span>
-                </p>
-                `)
-        }
-    }
+app.searchAPI = (item) => {
+    let formatted = item.split(' ').join('%20')
+    $.ajax({
+            url: `https://swapi.dev/api/vehicles/?search=${formatted}`,
+            method: 'GET',
+            dataType: 'json',
+        }).then(res => {
+            app.displaySelected(res.results[0])
+            // console.log(res.results[0].name);
+        });
 }
 
+app.displaySelected = (item) => {
+    $('.description').empty()
+    $('.description').append(`
+    <h3>${item.name}</h3>
+    <p>
+    <span>Manufacturer: ${item.manufacturer}</span>
+    <br>
+    <span>Cost: ${item.cost_in_credits} credits</span>
+    <br>
+    <span>Vehicle Class: ${item.vehicle_class}</span>
+    <br>
+    <span>Speed ${item.max_atmosphering_speed}km/h</span>
+    <br>
+    <span>Cargo Capacity: ${item.cargo_capacity}kg</span>
+    <br>
+    <span>Length: ${item.length}m</span>
+    <br>
+    <span>Crew: ${item.crew}</span>
+    <br>
+    <span>Passengers: ${item.passengers}</span>
+    </p>
+    `);
+};
