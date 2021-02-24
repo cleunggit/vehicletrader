@@ -75,6 +75,10 @@ h2 {
   z-index: 1;
 }
 
+.header__logo img {
+  width: 100%;
+}
+
 .shadow {
   filter: drop-shadow(rgba(0, 0, 0, 0.3) 0px 2px 3px)
 }
@@ -112,15 +116,26 @@ a, a:visited, a:hover {
 
 .ad {
   color: var(--lightgray);
-  background-color: rgba(230,189,8, 0.7);
-  width: 380px;
+  background-color: rgba(8, 160, 230, 0.9);
+  width: 450px;
   text-align: left;
   padding: 10px;
   border-radius: 4px;
+  font-size: 1.8rem;
+}
+
+.ad h2 {
+  margin: 0;
+}
+
+.ad h3 {
+  margin: 0;
 }
 
 .ad p {
   margin: 0;
+  font-size: 16px;
+  text-align: left;
 }
 
 .overlay {
@@ -156,7 +171,7 @@ form {
 
 .searchBtnContainer {
   display: block;
-  background: var(--blue);
+  background: var(--yellow);
   padding: 15px 60px;
   border-radius: 4px;
 }
@@ -172,13 +187,17 @@ form {
   visibility: hidden;
 }
 
-
 .specs h3 {
-  
+  text-align: left;
+  color: gray;
 }
 
 .specs .details {
-  
+  table-layout: fixed;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+
 }
 
 .vehicle_class {

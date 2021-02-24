@@ -160,28 +160,60 @@ app.displaySelected = (item) => {
     $('.card').addClass('visible')
     $('.vehicle-name').append(`
     <h3>${item.name}</h3>
-    <p>${item.cost_in_credits} credits</p>
+    <h3>${item.cost_in_credits} credits</h3>
     `)
 
     $('.specs').append(`
-        <div class="details">
-        <h3>Specifications</h3>
-        <p>
-        <span>Manufacturer: ${item.manufacturer}</span>
-        <br>
-        <span>Vehicle Class: ${item.vehicle_class}</span>
-        <br>
-        <span>Speed ${item.max_atmosphering_speed}km/h</span>
-        <br>
-        <span>Cargo Capacity: ${item.cargo_capacity}kg</span>
-        <br>
-        <span>Length: ${item.length}m</span>
-        <br>
-        <span>Crew: ${item.crew}</span>
-        <br>
-        <span>Passengers: ${item.passengers}</span>
-        </p>
-        </div>
-    `);
-};
+    <h3>Specifications</h3>
+    <table class="details">
+        <tr>
+            <td>Manufacturer:</td>
+            <td>${item.manufacturer}</td>
+        </tr>
+        <tr>
+            <td>Vehicle Class:</td>
+            <td>${item.vehicle_class}</td>
+        </tr>
+        <tr>
+            <td>Speed:</td>
+            <td>${item.max_atmosphering_speed}km/h</td>
+        </tr>
+        <tr>
+            <td>Cargo Capacity:</td>
+            <td>${item.cargo_capacity}kg</td>
+        </tr>
+        <tr>
+            <td>Length:</td>
+            <td>${item.length}m</td>
+        </tr>
+        <tr>
+            <td>Crew:</td>
+            <td>${item.crew}</td>
+        </tr>
+        <tr>
+            <td>Passengers:</td>
+            <td>${item.passengers}</td>
+        </tr>
+    </table>
+        `);
+    };
 
+
+    // <div class="details">
+    // <h3>Specifications</h3>
+    // <p>
+    // <span>Manufacturer:</span><span>${item.manufacturer}</span>
+    // <br>
+    // <span>Vehicle Class: ${item.vehicle_class}</span>
+    // <br>
+    // <span>Speed ${item.max_atmosphering_speed}km/h</span>
+    // <br>
+    // <span>Cargo Capacity: ${item.cargo_capacity}kg</span>
+    // <br>
+    // <span>Length: ${item.length}m</span>
+    // <br>
+    // <span>Crew: ${item.crew}</span>
+    // <br>
+    // <span>Passengers: ${item.passengers}</span>
+    // </p>
+    // </div>
