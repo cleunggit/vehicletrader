@@ -128,11 +128,24 @@ form {
   padding: 10px 40px;
 }
 
-
-.card {
-
+.selectedVehicle {
+  width: 100%;
 }
 
+.card {
+  background-color: white;
+  padding: 5px 20px;
+  margin: 20px 0;
+}
+
+
+.specs h3 {
+  
+}
+
+.specs .details {
+  
+}
 
 .vehicle_class {
   flex-direction: column;

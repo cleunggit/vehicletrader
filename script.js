@@ -155,13 +155,18 @@ app.renderModels = (vehicles) => {
 
 // This function takes the response from the searchAPI function and renders the vehicle specs on the page
 app.displaySelected = (item) => {
-    $('.description').empty()
-    $('.description').append(`
+    $('.specs').empty()
+
+    $('.vehicle-name').append(`
     <h3>${item.name}</h3>
+    <p>${item.cost_in_credits} credits</p>
+    `)
+
+    $('.specs').append(`
+    <div class="details">
+    <h3>Specifications</h3>
     <p>
     <span>Manufacturer: ${item.manufacturer}</span>
-    <br>
-    <span>Cost: ${item.cost_in_credits} credits</span>
     <br>
     <span>Vehicle Class: ${item.vehicle_class}</span>
     <br>
@@ -175,6 +180,7 @@ app.displaySelected = (item) => {
     <br>
     <span>Passengers: ${item.passengers}</span>
     </p>
+    </div>
     `);
 };
 
