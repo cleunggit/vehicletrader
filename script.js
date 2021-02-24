@@ -155,6 +155,7 @@ app.renderModels = (vehicles) => {
 
 // This function takes the response from the searchAPI function and renders the vehicle specs on the page
 app.displaySelected = (item) => {
+    $('.vehicle-name').empty()
     $('.specs').empty()
 
     $('.vehicle-name').append(`
@@ -163,24 +164,24 @@ app.displaySelected = (item) => {
     `)
 
     $('.specs').append(`
-    <div class="details">
-    <h3>Specifications</h3>
-    <p>
-    <span>Manufacturer: ${item.manufacturer}</span>
-    <br>
-    <span>Vehicle Class: ${item.vehicle_class}</span>
-    <br>
-    <span>Speed ${item.max_atmosphering_speed}km/h</span>
-    <br>
-    <span>Cargo Capacity: ${item.cargo_capacity}kg</span>
-    <br>
-    <span>Length: ${item.length}m</span>
-    <br>
-    <span>Crew: ${item.crew}</span>
-    <br>
-    <span>Passengers: ${item.passengers}</span>
-    </p>
-    </div>
+        <div class="details">
+        <h3>Specifications</h3>
+        <p>
+        <span>Manufacturer: ${item.manufacturer}</span>
+        <br>
+        <span>Vehicle Class: ${item.vehicle_class}</span>
+        <br>
+        <span>Speed ${item.max_atmosphering_speed}km/h</span>
+        <br>
+        <span>Cargo Capacity: ${item.cargo_capacity}kg</span>
+        <br>
+        <span>Length: ${item.length}m</span>
+        <br>
+        <span>Crew: ${item.crew}</span>
+        <br>
+        <span>Passengers: ${item.passengers}</span>
+        </p>
+        </div>
     `);
 };
 

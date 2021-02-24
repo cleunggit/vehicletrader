@@ -54,6 +54,10 @@ body {
   align-items: center;
 }
 
+.flex-ac-c {
+  align-content: center;
+}
+
 .nav {
   flex-direction: column;
 }
@@ -91,23 +95,27 @@ a, a:visited, a:hover {
 
 .hero {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   align-content: center;
-  /* height: 350px; */
-  /* margin: 50px 0; */
   background-color: white;
 }
 
 .hero img {
-  width: 35%;
-  margin-top: 50px;
-  margin-bottom: 80px;
+  width: 100%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 200px;
+  right: 140px;
+  /* bottom: 0; */
+  /* right: 0; */
 }
 
 #search {
   text-align: left;
-  height: 200px;
+  /* height: 200px; */
   margin-top: -50px;
 }
 
@@ -118,6 +126,12 @@ a, a:visited, a:hover {
   
 }
 
+select {
+  border: 0;
+  padding: 15px;
+  border-radius: 4px;
+}
+
 form {
   width: 100%;
 }
@@ -125,7 +139,7 @@ form {
 .searchBtnContainer {
   display: block;
   background: var(--yellow);
-  padding: 10px 40px;
+  padding: 15px 40px;
 }
 
 .selectedVehicle {
@@ -160,8 +174,13 @@ form {
   width: 100%;
 }
 
+.partners {
+  flex-direction: column;
+}
+
 .partners img {
   width: 100px;
+  margin-right: 20px;
 }
 
 .footer {
