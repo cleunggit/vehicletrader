@@ -198,22 +198,63 @@ app.displaySelected = (item) => {
         `);
     };
 
+    // app.searchClass = (item) => {
+    //     if (item === '') return // prevents searching before options are selected
+    
+    //     let formatted = item.split(' ').join('%20')
+    //     $.ajax({
+    //             url: `https://swapi.dev/api/vehicles/?search=${formatted}`,
+    //             method: 'GET',
+    //             dataType: 'json',
+    //         }).then(res => {
+    //             app.displayClass(res.results)
+    //         });
+    // }
 
-    // <div class="details">
-    // <h3>Specifications</h3>
-    // <p>
-    // <span>Manufacturer:</span><span>${item.manufacturer}</span>
-    // <br>
-    // <span>Vehicle Class: ${item.vehicle_class}</span>
-    // <br>
-    // <span>Speed ${item.max_atmosphering_speed}km/h</span>
-    // <br>
-    // <span>Cargo Capacity: ${item.cargo_capacity}kg</span>
-    // <br>
-    // <span>Length: ${item.length}m</span>
-    // <br>
-    // <span>Crew: ${item.crew}</span>
-    // <br>
-    // <span>Passengers: ${item.passengers}</span>
-    // </p>
-    // </div>
+    // app.displayClass = (vehicleClass) => {
+    //     // $('.vehicle-class').append(`
+    //     //     <div>
+    //     //         <h2>${vehicle.class}</h2>
+    //     //     </div>
+    //     // `);
+    //     vehicleClass.forEach((vehicle) => {
+    //         $('.vehicle').append(`
+    //         <div class="vehicle-name card visible">
+    //             <h3>${vehicle.name}</h3>
+    //         </div>
+    //         <div class="specs card visible">
+    //         <h3>Specifications</h3>
+    //         <table class="details">
+    //             <tr>
+    //                 <td>Manufacturer:</td>
+    //                 <td>${vehicle.manufacturer}</td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Vehicle Class:</td>
+    //                 <td>${vehicle.vehicle_class}</td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Speed:</td>
+    //                 <td>${vehicle.max_atmosphering_speed}km/h</td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Cargo Capacity:</td>
+    //                 <td>${vehicle.cargo_capacity}kg</td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Length:</td>
+    //                 <td>${vehicle.length}m</td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Crew:</td>
+    //                 <td>${vehicle.crew}</td>
+    //             </tr>
+    //             <tr>
+    //                 <td>Passengers:</td>
+    //                 <td>${vehicle.passengers}</td>
+    //             </tr>
+    //         </table>
+    //         </div>
+    //         `)
+    //     })
+    // }

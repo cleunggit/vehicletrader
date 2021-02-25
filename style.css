@@ -23,7 +23,7 @@ body {
 }
 
 h2 {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .wrapper {
@@ -249,3 +249,4 @@ form {
 .visible {
   visibility: visible;
 }
+
