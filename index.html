@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Project 2</title>
 </head>
@@ -13,6 +13,7 @@
 <body>
     <div class="wrapper">
         <header>
+            <!-- Navbar starts -->
             <nav class="nav flex">
                 <a href="" class="header__logo shadow">
                     <img src="assets/logo-orange.png" alt="">
@@ -32,7 +33,10 @@
                     <a class="nav-item" href="#">What's My Ship Worth?</a>
                 </div>
             </nav>
+            <!-- Navbar ends -->
         </header>
+
+        <!-- Hero starts -->
         <div class="hero">
             <img src="assets/cobb-vanth-s-speeder-main_e26efd00.webp" alt="">
             <div class="container">
@@ -46,7 +50,9 @@
                 </div>
             </div>
         </div>
+        <!-- Hero ends -->
 
+        <!-- Search bar starts -->
         <div class="container">
             <section id="search">
                 <div class="basicSearch">
@@ -87,20 +93,22 @@
                     </form>
                 </div>
             </section>
-
-            <section class="selectedVehicle card shadow">
+            <!-- Search bar ends -->
+            
+            <!-- Search result starts -->
+            <article class="selectedVehicle card shadow">
                 <div class="vehicle-name flex flex-jc-sb flex-ai-c">
                     <!-- Dynamically added -->
                 </div>
-            </section>
-
-            <section class="selectedVehicle card shadow">
+            </article>
+            <article class="selectedVehicle card shadow">
                 <div class="specs">
                     <!-- Dynamically added -->
                 </div>
-            </section>
+            </article>
+            <!-- Search result ends -->
 
-            <!-- Vehicles by Class -->
+            <!-- Vehicles by Class starts -->
             <section class="vehicle_class flex">
                 <h2>Research new vehicles by class</h2>
                 <div class="classes flex">
@@ -138,13 +146,17 @@
                     </div>
                 </div>
             </section>
-<!-- 
+            <!-- Vehicles by Class ends -->
+            
+            <!-- To be continued -->
+            <!-- 
             <section class="vehicle-class card shadow">
                 <div class="vehicle">
                     
                 </div>
             </section> -->
 
+            <!-- Our Partners starts -->
             <section class="partners flex flex-ai-c">
                 <h2>Our Partners</h2>
                 <div class="partner-links flex flex-ai-c">
@@ -152,13 +164,15 @@
                     <a href="https://swapi.dev"><img src="/vehicletrader/assets/swapi.png" alt=""></a>
                 </div>
             </section>
-
+            <!-- Our Partners ends -->
         </div>
+        <!-- Footer starts -->
         <footer class="footer">
             <div class="container">
                 <p>Created at Juno College by Christopher Leung</p>
             </div>
         </footer>
+        <!-- Footer ends -->
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
